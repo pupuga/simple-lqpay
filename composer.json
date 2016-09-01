@@ -1,7 +1,6 @@
 {
     "name": "shandortb/simple-liqpay",
     "description": "liqpay for woocommerce",
-	"version": "1.0.0",
     "keywords": ["wordpress","woocommerce","liqpay"],
     "homepage": "https://github.com/ShandorTB/simple-liqpay",
     "license": "MIT",
