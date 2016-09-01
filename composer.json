@@ -5,7 +5,6 @@
     "keywords": ["wordpress","woocommerce","liqpay"],
     "homepage": "https://github.com/ShandorTB/simple-liqpay",
     "license": "MIT",
-	"minimum-stability": "dev",
     "authors": [
         {
             "name": "Alex Shandor",
