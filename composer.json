@@ -1,7 +1,24 @@
 {
     "name": "pupuga/simple-liqpay",
-    "description": "simple liqpay for woocommerce",
+    "type": "library",
+    "description": "liqpay for woocommerce",
+    "keywords": ["wordpress","woocommerce","liqpay"],
+    "homepage": "https://github.com/ShandorTB/simple-liqpay",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex Shandor",
+            "email": "mvshandor@gmail.com",
+            "homepage": "http://pupuga.ner",
+            "role": "Developer"
+        }
+    ],
     "require": {
-        "php": "^5.3.3 || ^7.0"
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Monolog": "src"
+        }
     }
 }
