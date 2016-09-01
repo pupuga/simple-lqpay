@@ -1,5 +1,5 @@
 {
-    "name": "vendor/simple-liqpay",
+    "name": "simple-liqpay",
     "description": "simple liqpay for woocommerce",
     "require": {
         "php": "^5.3.3 || ^7.0"
