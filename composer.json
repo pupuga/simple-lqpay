@@ -1,6 +1,5 @@
 {
     "name": "pupuga/simple-liqpay",
-    "type": "library",
     "description": "liqpay for woocommerce",
     "keywords": ["wordpress","woocommerce","liqpay"],
     "homepage": "https://github.com/ShandorTB/simple-liqpay",
