@@ -6,7 +6,7 @@
     "homepage": "https://github.com/pupuga/simple-lqpay",
     "license": "GPL-2.0",
     "prefer-stable": true,
-    "minimum-stability": "dev",
+    "minimum-stability": "dev-master",
     "authors": [
         {
             "name": "Alex Shandor",
@@ -22,10 +22,10 @@
         }
     ],
     "require": {
-        "php": ">=5.3.0"
+        "php": ">=5.3.0",
+        "pupuga/simple-liqpay": "dev-master"
     },
     "autoload": {
         "psr-0": { "": "src/" }
     }
 }
-
