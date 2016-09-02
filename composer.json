@@ -3,7 +3,7 @@
     "description": "liqpay for woocommerce",
     "type": "library",
     "keywords": ["wordpress","woocommerce","liqpay"],
-    "homepage": "https://github.com/pupuga/simple-liqpay",
+    "homepage": "https://github.com/pupuga/simple-lqpay",
     "license": "GPL-2.0",
     "authors": [
         {
@@ -16,7 +16,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/pupuga/simple-liqpay"
+            "url": "https://github.com/pupuga/simple-lqpay"
         }
     ],
     "require": {
