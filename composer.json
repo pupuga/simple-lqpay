@@ -5,7 +5,7 @@
     "keywords": ["wordpress","woocommerce","liqpay"],
     "homepage": "https://github.com/pupuga/simple-lqpay",
     "license": "GPL-2.0",
-    "minimum-stability": "dev-master",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Alex Shandor",
