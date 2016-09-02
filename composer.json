@@ -1,5 +1,5 @@
 {
-    "name": "shandortb/simple-liqpay",
+    "name" : "pupuga/simple-liqpay",
     "description": "liqpay for woocommerce",
     "keywords": ["wordpress","woocommerce","liqpay"],
     "homepage": "https://github.com/ShandorTB/simple-liqpay",
@@ -12,7 +12,6 @@
             "role": "Developer"
         }
     ],
-	"minimum-stability": "dev",
     "require": {
         "php": ">=5.3.0"
     }
