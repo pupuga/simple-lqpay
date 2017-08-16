@@ -3,7 +3,7 @@
 Plugin Name: WooCommerce Simple LiqPay
 Plugin URI:
 Description: LiqPay gateway for WooCommerce
-Version: 1.6
+Version: 1.7
 Author: Alex Shandor
 Author URI: http://pupuga.net
 */
@@ -17,7 +17,7 @@ function woocommerce_init() {
 
     class WC_Gateway_Liqpay extends WC_Payment_Gateway
     {
-        private $_checkout_url = 'https://www.liqpay.com/api/checkout';
+        private $_checkout_url = 'https://www.liqpay.ua/api/checkout';
         protected $_supportedCurrencies = array('EUR','UAH','USD','RUB','RUR');
 
         public function __construct() {
@@ -149,7 +149,7 @@ function woocommerce_init() {
 				'icon'     => array(
                     'title'       => __('Логотип', 'woocommerce'),
                     'type'        => 'text',
-					'default'     => 'https://www.liqpay.com/1440663992860980/static/img/business/logo.png',
+					'default'     => 'https://www.liqpay.ua/1440663992860980/static/img/business/logo.png',
                     'description' => __('Полный путь к логотипу, расположен на странице заказа', 'woocommerce'),
                     'desc_tip'    => true,
                 ),
@@ -300,7 +300,7 @@ function woocommerce_init() {
             $signature = $this->cnb_signature($params);
 
 			if (trim($this->button) == '') {
-				$button = '<input type="image" style="width: 160px" src="//static.liqpay.com/buttons/p1%s.radius.png" name="btn_text" />';
+				$button = '<input type="image" style="width: 160px" src="//static.liqpay.ua/buttons/p1%s.radius.png" name="btn_text" />';
 			} else {
 				$button = '<input type="image" style="width: 160px" src="'.$this->button.'" name="btn_text" />';
 			}
