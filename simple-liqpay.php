@@ -35,7 +35,7 @@ function woocommerce_init() {
             $this->sandbox = $this->get_option('sandbox');
 			if ($this->get_option('lang') == 'ru/en' && !is_admin()) {
 				$this->lang = call_user_func($this->get_option('lang_function'));
-				if ($this->lang == 'ru') {
+				if ($this->lang == 'ru' || $this->lang == 'uk') {
 					$key = 0;
 				} else {
 					$key = 1;	
@@ -135,7 +135,7 @@ function woocommerce_init() {
                     'title'       => __('Язык', 'woocommerce'),
                     'type'        => 'select',
 					'default'     => 'ru',
-					'options'     => array('ru'=> __('ru', 'woocommerce'), 'en'=> __('en', 'woocommerce'), 'ru/en'=> __('ru + en', 'woocommerce')),
+					'options'     => array('ru'=> __('ru', 'woocommerce'), 'uk'=> __('uk', 'woocommerce'), 'en'=> __('en', 'woocommerce'), 'ru/en'=> __('ru + en', 'woocommerce')),
                     'description' => __('Язык интерфейса (Для ru + en установите мультиленг плагин. Разделение языков с помощью :: .)', 'woocommerce'),
                     'desc_tip'    => true,
                 ),
@@ -300,15 +300,51 @@ function woocommerce_init() {
             $signature = $this->cnb_signature($params);
 
 			if (trim($this->button) == '') {
-				$button = '<input type="image" style="width: 160px" src="//static.liqpay.ua/buttons/p1%s.radius.png" name="btn_text" />';
+				$button = "<button class=\"button-liqpay\" onmouseover=\"this.style.opacity='0.5';\" onmouseout=\"this.style.opacity='1';\">
+                <img src=\"https://static.liqpay.ua/buttons/logo-small.png\" name=\"btn_text\"
+                    style=\"margin-right: 7px !important; vertical-align: middle !important;\"/>
+                <span style=\"vertical-align:middle; !important\">".__('Pay for order', 'woocommerce')."</span>
+            </button>";
 			} else {
 				$button = '<input type="image" style="width: 160px" src="'.$this->button.'" name="btn_text" />';
-			}
+            }
+            
+            $style = "<style>.button-liqpay {
+                border: none !important; 
+                display:inline-block !important;
+                text-align: center !important;
+                padding: 7px 20px !important;
+                color: #fff !important; 
+                cursor: pointer !important; 
+                border-radius: 2px !important;
+                background: rgb(122,183,43) !important;
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 0 2px 0 rgba(0,0,0,.12);
+                outline: none;
+                border: none;
+                letter-spacing: .6px;
+                vertical-align: middle;
+                -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                -moz-osx-font-smoothing: grayscale;
+                position: relative;
+                overflow: hidden;
+                -webkit-transition-property: color;
+                transition-property: color;
+                -webkit-transition-duration: .3s;
+                transition-duration: .3s;
+                -webkit-transition: all .2s ease-in-out;
+                -moz-transition: all .2s ease-in-out;
+                -ms-transition: all .2s ease-in-out;
+                -o-transition: all .2s ease-in-out;
+            }</style>";
 			
             return sprintf('
             <form method="POST" action="%s" accept-charset="utf-8">
                 %s
-                %s'. $button . '
+                %s'. $button . $style . '
+                
             </form>
             ',
                 $this->_checkout_url,
